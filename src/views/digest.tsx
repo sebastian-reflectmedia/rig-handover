@@ -12,8 +12,8 @@ function Row(props: { row: DigestRow }) {
   return (
     <tr class={warn ? 'warn' : undefined}>
       <td>
-        {warn ? '! ' : ''}
         {r.job}
+        {warn ? <b> !</b> : null}
       </td>
       <td>{r.owner ?? dash}</td>
       <td>{r.runs}</td>
